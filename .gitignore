@@ -1,3 +1,7 @@
+# Agent Package Manager 
+.apm/
+.apm_modules/
+
 # Nix build artifacts
 result
 result-*
