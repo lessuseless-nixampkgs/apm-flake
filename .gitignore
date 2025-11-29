@@ -1,0 +1,36 @@
+# Nix build artifacts
+result
+result-*
+
+# NPM local packages (from devshell configuration)
+.npm-packages/
+
+# Direnv
+.direnv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment files (if you create any local ones)
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
