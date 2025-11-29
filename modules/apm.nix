@@ -53,6 +53,8 @@
               # Move scripts to src/apm_cli/scripts so they are included in the package
               mkdir -p src/apm_cli/scripts
               cp -r scripts/* src/apm_cli/scripts/
+              touch src/apm_cli/scripts/__init__.py
+
 
               # Fix path resolution in RuntimeManager
               substituteInPlace src/apm_cli/runtime/manager.py \
@@ -76,7 +78,7 @@
                 mypy
                 pytest
                 pytest-cov
-                nodejs_24
+                pkgs.nodejs_24
               ];
             };
 

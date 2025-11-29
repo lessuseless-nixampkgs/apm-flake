@@ -1,4 +1,9 @@
-{ lib, pkgs, fetchFromGitHub, ... }:
+{
+  lib,
+  pkgs,
+  fetchFromGitHub,
+  ...
+}:
 
 pkgs.python3.pkgs.buildPythonApplication rec {
   pname = "llm-github-models";
@@ -17,12 +22,14 @@ pkgs.python3.pkgs.buildPythonApplication rec {
     wheel
   ];
 
-  dependencies = (with pkgs.python3.pkgs; [
-    aiohttp
-    llm
-  ]) ++ [
-    (pkgs.callPackage ./azure-ai-inference.nix { })
-  ];
+  dependencies =
+    (with pkgs.python3.pkgs; [
+      aiohttp
+      llm
+    ])
+    ++ [
+      (pkgs.callPackage ./azure-ai-inference.nix { })
+    ];
 
   optional-dependencies = with pkgs.python3.pkgs; {
     test = [
@@ -39,7 +46,7 @@ pkgs.python3.pkgs.buildPythonApplication rec {
   ];
 
   meta = {
-    description = "";
+    description = "GitHub Models Plugin for LLM";
     homepage = "https://github.com/tonybaloney/llm-github-models";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ ];
