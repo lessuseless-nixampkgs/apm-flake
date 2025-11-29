@@ -2,6 +2,10 @@
 .apm/
 .apm_modules/
 
+# Copilot
+.copilot/
+.copilot-logs/
+
 # Nix build artifacts
 result
 result-*
