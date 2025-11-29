@@ -1,0 +1,13 @@
+name: Compliance Audit
+on: [push, pull_request]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: danielmeppiel/action-apm-cli@v1
+        with:
+          script: audit
+        env:
+          GITHUB_COPILOT_PAT: ${{ secrets.GITHUB_COPILOT_PAT }}

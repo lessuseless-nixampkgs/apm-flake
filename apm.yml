@@ -1,0 +1,8 @@
+name: apm-flake
+version: 1.0.0
+description: APM project for apm-flake
+author: lessuseless
+dependencies:
+  apm: []
+  mcp: []
+scripts: {}
