@@ -1,7 +1,7 @@
-name: apm-flake
+name: apm-flake-parts
 version: 1.0.0
-description: APM project for apm-flake
-author: lessuseless
+description: Nix Flake-Parts Packaging of the Agent Package Manager
+author: Ashley Barr
 dependencies:
   apm:
   - github/awesome-copilot/prompts/architecture-blueprint-generator.prompt.md

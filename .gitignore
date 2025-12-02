@@ -1,6 +1,7 @@
 # Agent Package Manager 
 .apm/
 .apm_modules/
+apm_modules/
 
 # Copilot
 .copilot/
